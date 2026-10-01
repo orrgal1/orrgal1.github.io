@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Mi Smart Scale Mailer</title>
+  <style>
+    :root { font: 17px/1.6 system-ui, -apple-system, sans-serif; color: #17252c; background: #f7faf9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 750px; margin: 0 auto; padding: 12vh 24px 80px; }
+    .eyebrow { color: #16705f; font-size: .82rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { font-size: clamp(2.4rem, 8vw, 4.5rem); line-height: 1.05; letter-spacing: -.045em; margin: 16px 0 24px; }
+    p { max-width: 60ch; }
+    .lead { font-size: 1.18rem; color: #33464d; }
+    section { border-top: 1px solid #cbdbd7; margin-top: 44px; padding-top: 28px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    a { color: #006b58; text-decoration-thickness: .08em; text-underline-offset: .17em; }
+    a:focus-visible { outline: 3px solid #ffb44d; outline-offset: 4px; }
+    footer { color: #53666c; font-size: .85rem; margin-top: 64px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Personal macOS utility</div>
+    <h1>Mi Smart Scale Mailer</h1>
+    <p class="lead">A local logger for Or’s Mi Smart Scale 2. It captures a completed live weight reading over Bluetooth, saves it on Or’s Mac, and emails one event to Or’s chosen Instinct mailbox.</p>
+    <section>
+      <h2>Why Google access is requested</h2>
+      <p>The app uses Google account identity to verify the sending account and the Gmail send permission to deliver scale events. It does not read or search Gmail messages. The Bluetooth capture and event store run on Or’s Mac.</p>
+    </section>
+    <section>
+      <h2>Your data</h2>
+      <p>Each email contains only one completed weigh-in: its weight, unit, observation time, event ID, source, stability flag, and person label. The logger does not estimate body composition or retrieve historical scale data.</p>
+      <p>Read the <a href="privacy/">privacy policy</a> for how local readings and Google account access are handled.</p>
+    </section>
+    <footer>Operated by Or Gal for personal use. For questions, use the support contact shown on the Google consent screen.</footer>
+  </main>
+</body>
+</html>

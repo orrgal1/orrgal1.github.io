@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Privacy policy · Mi Smart Scale Mailer</title>
+  <style>
+    :root { font: 16px/1.65 system-ui, -apple-system, sans-serif; color: #17252c; background: #f7faf9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 750px; margin: 0 auto; padding: 72px 24px 100px; }
+    h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.1; letter-spacing: -.035em; margin: 24px 0 8px; }
+    h2 { font-size: 1.2rem; margin-top: 40px; }
+    p, li { max-width: 65ch; }
+    li { margin: 8px 0; }
+    .meta { color: #53666c; }
+    a { color: #006b58; text-decoration-thickness: .08em; text-underline-offset: .17em; }
+    a:focus-visible { outline: 3px solid #ffb44d; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="../">← Mi Smart Scale Mailer</a>
+    <h1>Privacy policy</h1>
+    <p class="meta">Effective October 1, 2026 · Operated by Or Gal for personal use</p>
+
+    <h2>What the app handles</h2>
+    <p>The logger observes live Bluetooth weight advertisements from a selected Mi Smart Scale 2. It keeps the selected device’s CoreBluetooth identifier locally on Or’s Mac. For a completed weigh-in it stores weight, original unit, host observation time, event ID, stability flag, source, and a person label. A dedicated scale may be labeled Or; a shared scale is labeled unknown. It does not infer identity from weight, estimate body composition, or obtain past readings from the scale or Xiaomi cloud.</p>
+
+    <h2>Google data and permissions</h2>
+    <p>The app requests Google account identity (<code>openid</code> and <code>email</code>) to verify the sender, and <code>gmail.send</code> to send event emails. It uses the Gmail API only to send. It does not read, search, change, or delete Gmail messages, contacts, Drive files, or calendar events. Google OAuth credentials are kept in a local user-only file on the Mac and are not placed in the source repository.</p>
+
+    <h2>Where an event goes</h2>
+    <p>One completed weigh-in is emailed to the owner-designated Instinct mailbox through Google. The JSON body contains only that reading. The receiving Instinct agent is expected to treat it as data and deduplicate retries using the event ID. The app does not sell data, use it for advertising, or send it to analytics services.</p>
+
+    <h2>Storage and retention</h2>
+    <p>Readings and unsent events remain in a private SQLite database on Or’s Mac until Or removes them. A per-user background process retries unsent mail after temporary failure. Google may retain a sent-mail copy under the Google account’s settings, and the recipient may retain the delivered email under its own controls. Uninstalling the background process leaves local readings in place so they are not accidentally lost.</p>
+
+    <h2>Security and choices</h2>
+    <p>The app uses user-only file permissions for its local database, configuration, and OAuth token. Operational logs exclude weights, Bluetooth identifiers, email bodies, and secrets. Or can stop the background service, revoke the app’s Google access from Google Account settings, and delete the local private data after stopping the service. For privacy questions, use the support contact shown on the Google consent screen.</p>
+
+    <h2>Changes</h2>
+    <p>This page will be updated if the app’s data handling changes. This is a personal utility and not offered to other users.</p>
+  </main>
+</body>
+</html>
